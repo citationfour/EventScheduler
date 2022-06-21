@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html id="html">
+    <head>
+        <title>The event scheduler</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <button onclick="darkWhite()" id="darkWhiteMode" class="darkModeBtn">
+            Dark Mode
+        </button>
+        <script src="main.js"></script>
+        <div class="pageTitleDiv">
+            <p class="pageTitle" id="pageTitle">
+                The Event Scheduler
+            </p>
+        </div>
+        <div class="eventHolder">
+            <label id="timeLabel">Time:</label>
+            <input type="time" id="time" class="timeBtn">
+
+            <label id="dateLabel">Date:</label>
+            <input type="date" id="date" class="dateBtn">
+
+            <label id="placeLabel">Place:</label>
+            <input type="text" id="place" class="placeBtn">
+
+            <label id="doinLabel">Doing:</label>
+            <input type="text" id="doing" class="doingBtn">
+
+            <input type="submit" value="submit" onclick="updateData()" class="submitBtn" id="submit">
+            
+            <div>
+                <div class="eventScrollText">
+                    <p id="eventText" class="eventText"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
