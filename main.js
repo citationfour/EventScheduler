@@ -1,13 +1,9 @@
 //var
-var timeData = "";
-var dateData = "";
-var placeData = "";
-var doingData = "";
-
-var eventText = "";
 var eventNumber = 1;
 
 var darkWhiteBtnPressed = 0;
+
+//functions
 
 function updateEvent() {
     if (eventNumber == 1) {
@@ -28,6 +24,16 @@ function updateData() {
     updateEvent();
 }
 
+function updateInput() {
+    inputDataText = document.getElementById("dataInput").value;
+
+    eventTextvar = document.getElementById("eventText").insertAdjacentHTML("beforeend", "<br>" + inputDataText);
+    document.getElementById("eventText").insertAdjacentElement("beforeend", eventTextvar)
+
+    console.log("Enter Button Pressed and Logged on updateInput()" + inputDataText);
+}
+
+//dark white mode functions
 function darkWhite() {
     if (darkWhiteBtnPressed == 0) {
         //change button colors
@@ -49,6 +55,10 @@ function darkWhite() {
         document.getElementById("doinLabel").style.color = "white";
         document.getElementById("submit").style.color = "white";
 
+        //change textarea
+        document.getElementById("dataInput").style.backgroundColor = "black";
+        document.getElementById("dataInput").style.color = "white"
+
         //background color change
         document.getElementById("html").style.backgroundColor = "black";
 
@@ -57,7 +67,7 @@ function darkWhite() {
         document.getElementById("darkWhiteMode").style.backgroundColor = "white";
 
         //white mode
-        document.getElementById("darkWhiteMode").innerHTML = "White Mode (Are you crazy?)";
+        document.getElementById("darkWhiteMode").innerHTML = "White Mode";
     
         darkWhiteBtnPressed ++;
     }
@@ -81,6 +91,10 @@ function darkWhite() {
         document.getElementById("placeLabel").style.color = "black";
         document.getElementById("doinLabel").style.color = "black";
         document.getElementById("submit").style.color = "black";
+
+        //change textarea
+        document.getElementById("dataInput").style.backgroundColor = "white";
+        document.getElementById("dataInput").style.color = "black"
 
         //background color change
         document.getElementById("html").style.backgroundColor = "white";

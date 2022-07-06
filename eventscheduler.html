@@ -2,17 +2,24 @@
 <html id="html">
     <head>
         <title>The event scheduler</title>
+        <!--css import-->
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <button onclick="darkWhite()" id="darkWhiteMode" class="darkModeBtn">
             Dark Mode
         </button>
+        <!--js import-->
         <script src="main.js"></script>
         <div class="pageTitleDiv">
             <p class="pageTitle" id="pageTitle">
                 The Event Scheduler
             </p>
+            <p class="noteText">Note: Try ctrl+plus or ctrl+minus if the screen is too small or big!</p>
+        </div>
+        <div class="dataInputDiv">
+            <textarea id="dataInput" class="dataInput"></textarea>
+            <button onclick="updateInput()" class="dateSubmit">Enter</button>
         </div>
         <div class="eventHolder">
             <label id="timeLabel">Time:</label>
@@ -28,11 +35,24 @@
             <input type="text" id="doing" class="doingBtn">
 
             <input type="submit" value="submit" onclick="updateData()" class="submitBtn" id="submit">
-            
-            <div>
-                <div class="eventScrollText">
-                    <p id="eventText" class="eventText"></p>
-                </div>
+        </div>
+        <div class="eventScroll">
+            <p id="eventText" class="eventText"></p>
+        </div>
+
+        <!--links-->
+        <div class="links">
+            <div class="twitterDiv">
+                <a href="https://twitter.com/pyidiot">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png" class="twitterSvg">
+                    <p class="twitterText">@pyidiot</p>
+                </a>
+            </div>
+            <div class="githubDiv">
+                <a href="https://github.com/elfryt/">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="githubSvg">
+                    <p class="githubText">@elfryt</p>
+                </a>
             </div>
         </div>
     </body>
